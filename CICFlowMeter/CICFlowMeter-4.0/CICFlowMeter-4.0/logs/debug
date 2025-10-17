@@ -1,0 +1,20 @@
+2025-10-17 10:25:41 INFO  cic.cs.unb.ca.ifm.Cmd    You select: C:\Users\noname\Documents\Computing Science. Year 1\Year 2\1a\NSA\Term Project\network-security-analytics\CICFlowMeter\CICFlowMeter-4.0\CICFlowMeter-4.0\in
+2025-10-17 10:25:41 INFO  cic.cs.unb.ca.ifm.Cmd    Out folder: C:\Users\noname\Documents\Computing Science. Year 1\Year 2\1a\NSA\Term Project\network-security-analytics\CICFlowMeter\CICFlowMeter-4.0\CICFlowMeter-4.0\out
+2025-10-17 10:29:26 INFO  cic.cs.unb.ca.ifm.Cmd    You select: C:\Users\noname\Documents\Computing Science. Year 1\Year 2\1a\NSA\Term Project\network-security-analytics\CICFlowMeter\CICFlowMeter-4.0\CICFlowMeter-4.0\in
+2025-10-17 10:29:26 INFO  cic.cs.unb.ca.ifm.Cmd    Out folder: C:\Users\noname\Documents\Computing Science. Year 1\Year 2\1a\NSA\Term Project\network-security-analytics\CICFlowMeter\CICFlowMeter-4.0\CICFlowMeter-4.0\out
+2025-10-17 10:33:52 INFO  cic.cs.unb.ca.ifm.Cmd    You select: /mnt/c/Users/noname/Documents/Computing Science. Year 1/Year 2/1a/NSA/Term Project/network-security-analytics/data
+2025-10-17 10:33:52 INFO  cic.cs.unb.ca.ifm.Cmd    Out folder: /mnt/c/Users/noname/Documents/Computing Science. Year 1/Year 2/1a/NSA/Term Project/network-security-analytics/out
+2025-10-17 10:35:36 INFO  cic.cs.unb.ca.ifm.Cmd    You select: /mnt/c/Users/noname/Documents/Computing Science. Year 1/Year 2/1a/NSA/Term Project/network-security-analytics/data
+2025-10-17 10:35:36 INFO  cic.cs.unb.ca.ifm.Cmd    Out folder: /mnt/c/Users/noname/Documents/Computing Science. Year 1/Year 2/1a/NSA/Term Project/network-security-analytics/out
+2025-10-17 10:40:50 INFO  cic.cs.unb.ca.ifm.Cmd    You select: /mnt/c/Users/noname/Documents/Computing Science. Year 1/Year 2/1a/NSA/Term Project/network-security-analytics/data
+2025-10-17 10:40:50 INFO  cic.cs.unb.ca.ifm.Cmd    Out folder: /mnt/c/Users/noname/Documents/Computing Science. Year 1/Year 2/1a/NSA/Term Project/network-security-analytics/out
+2025-10-17 11:51:54 INFO  cic.cs.unb.ca.ifm.Cmd    You select: /home/ssstoyanov/projects/nsa/network-security-analytics/data
+2025-10-17 11:51:54 INFO  cic.cs.unb.ca.ifm.Cmd    Out folder: /home/ssstoyanov/projects/nsa/network-security-analytics/out
+2025-10-17 11:51:55 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 2 flow
+2025-10-17 11:51:55 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 3 flow
+2025-10-17 11:51:55 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 3 flow
+2025-10-17 11:51:55 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 4 flow
+2025-10-17 11:51:55 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 4 flow
+2025-10-17 11:51:55 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 4 flow
+2025-10-17 11:51:55 DEBUG cic.cs.unb.ca.jnetpcap.PacketReader    Read All packets on /home/ssstoyanov/projects/nsa/network-security-analytics/data/ipp.pcap
+2025-10-17 11:51:55 DEBUG cic.cs.unb.ca.jnetpcap.PacketReader    Read All packets on /home/ssstoyanov/projects/nsa/network-security-analytics/data/ipv4frags.pcap

@@ -1,0 +1,5 @@
+2025-10-17 10:19:32 INFO  cic.cs.unb.ca.ifm.Cmd    Please select pcap!
+2025-10-17 10:20:04 DEBUG cic.cs.unb.ca.flow.ui.FlowOfflinePane    offline select input C:\Users\noname\Documents\Computing Science. Year 1\Year 2\1a\NSA\Term Project\network-security-analytics\data\ipv4frags.pcap
+2025-10-17 10:20:13 DEBUG cic.cs.unb.ca.flow.ui.FlowOfflinePane    offline select output C:\Users\noname\Documents\Computing Science. Year 1\Year 2\1a\NSA\Term Project\network-security-analytics\data
+2025-10-17 10:20:15 DEBUG cic.cs.unb.ca.jnetpcap.worker.ReadPcapFileWorker    Working on... C:\Users\noname\Documents\Computing Science. Year 1\Year 2\1a\NSA\Term Project\network-security-analytics\data\ipv4frags.pcap
+2025-10-17 10:20:15 DEBUG cic.cs.unb.ca.jnetpcap.PacketReader    Read All packets on C:\Users\noname\Documents\Computing Science. Year 1\Year 2\1a\NSA\Term Project\network-security-analytics\data\ipv4frags.pcap
