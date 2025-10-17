@@ -1,17 +1,34 @@
-FROM openjdk:8-jdk-slim
+# Use Ubuntu as the base image
+FROM ubuntu:22.04
 
-RUN apt-get update && apt-get install -y libpcap0.8 wget unzip curl && rm -rf /var/lib/apt/lists/*
+# Non-interactive installation
+ENV DEBIAN_FRONTEND=noninteractive
 
-WORKDIR /app/CICFlowMeter
+# Install Java 8, libpcap, and other dependencies
+RUN apt-get update && \
+    apt-get install -y openjdk-8-jdk libpcap-dev bash curl unzip && \
+    rm -rf /var/lib/apt/lists/*
 
-# Copy the unpacked CICFlowMeter directory
-COPY CICFlowMeter-4.0 /app/CICFlowMeter/CICFlowMeter-4.0
+# Set JAVA_HOME for Java 8
+ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+ENV PATH="$JAVA_HOME/bin:$PATH"
 
-# Ensure permissions and library paths
-RUN chmod +x /app/CICFlowMeter/CICFlowMeter-4.0/bin/cfm \
-    && mkdir -p /data /out
+# Copy CICFlowMeter from your repository into the container
+COPY CICFlowMeter-4.0/CICFlowMeter-4.0 /opt/CICFlowMeter-4.0
 
-ENV LD_LIBRARY_PATH=/app/CICFlowMeter/CICFlowMeter-4.0/lib/native:$LD_LIBRARY_PATH
-WORKDIR /app/CICFlowMeter/CICFlowMeter-4.0
+# Make binaries executable
+RUN chmod +x /opt/CICFlowMeter-4.0/bin/cfm && \
+    chmod +x /opt/CICFlowMeter-4.0/bin/CICFlowMeter
 
-ENTRYPOINT ["./bin/cfm"]
+# Set the Java library path to find libjnetpcap.so
+ENV JAVA_OPTS="-Djava.library.path=/opt/CICFlowMeter-4.0/lib/native"
+ENV PATH="$PATH:/opt/CICFlowMeter-4.0/bin"
+
+# Set working directory (for mounting input/output directories)
+WORKDIR /data
+
+# Declare mount points for data and output
+VOLUME ["/data", "/out"]
+
+# Default entrypoint runs CICFlowMeter CLI
+ENTRYPOINT ["cfm"]
