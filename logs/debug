@@ -1,7 +1,0 @@
-2025-10-15 23:13:57 INFO  cic.cs.unb.ca.ifm.Cmd    The pcap file or folder does not exist! -> data/yourfile.pcap
-2025-10-15 23:15:46 INFO  cic.cs.unb.ca.ifm.Cmd    You select: data/ipp.pcap
-2025-10-15 23:15:46 INFO  cic.cs.unb.ca.ifm.Cmd    Out folder: out
-2025-10-15 23:15:46 INFO  cic.cs.unb.ca.ifm.Cmd    CICFlowMeter received 1 pcap file
-2025-10-17 10:45:50 INFO  cic.cs.unb.ca.ifm.Cmd    The pcap file or folder does not exist! -> ./bin/cfm
-2025-10-17 10:46:09 INFO  cic.cs.unb.ca.ifm.Cmd    The pcap file or folder does not exist! -> ./bin/cfm
-2025-10-17 10:46:33 INFO  cic.cs.unb.ca.ifm.Cmd    The pcap file or folder does not exist! -> ./bin/cfm

@@ -1,0 +1,67 @@
+2025-10-18 09:14:59 INFO  cic.cs.unb.ca.ifm.Cmd    You select: /data/ipp.pcap
+2025-10-18 09:14:59 INFO  cic.cs.unb.ca.ifm.Cmd    Out folder: /out
+2025-10-18 09:14:59 INFO  cic.cs.unb.ca.ifm.Cmd    CICFlowMeter received 1 pcap file
+2025-10-18 09:14:59 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 2 flow
+2025-10-18 09:14:59 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 3 flow
+2025-10-18 09:14:59 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 3 flow
+2025-10-18 09:14:59 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 4 flow
+2025-10-18 09:14:59 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 4 flow
+2025-10-18 09:14:59 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 4 flow
+2025-10-18 09:14:59 DEBUG cic.cs.unb.ca.jnetpcap.PacketReader    Read All packets on /data/ipp.pcap
+2025-10-18 09:15:18 INFO  cic.cs.unb.ca.ifm.Cmd    You select: /data/ipp.pcap
+2025-10-18 09:15:18 INFO  cic.cs.unb.ca.ifm.Cmd    Out folder: /out
+2025-10-18 09:15:19 INFO  cic.cs.unb.ca.ifm.Cmd    CICFlowMeter received 1 pcap file
+2025-10-18 09:15:19 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 2 flow
+2025-10-18 09:15:19 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 3 flow
+2025-10-18 09:15:19 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 3 flow
+2025-10-18 09:15:19 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 4 flow
+2025-10-18 09:15:19 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 4 flow
+2025-10-18 09:15:19 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 4 flow
+2025-10-18 09:15:19 DEBUG cic.cs.unb.ca.jnetpcap.PacketReader    Read All packets on /data/ipp.pcap
+2025-10-18 09:15:40 INFO  cic.cs.unb.ca.ifm.Cmd    You select: /data/ipp.pcap
+2025-10-18 09:15:40 INFO  cic.cs.unb.ca.ifm.Cmd    Out folder: /out
+2025-10-18 09:15:40 INFO  cic.cs.unb.ca.ifm.Cmd    CICFlowMeter received 1 pcap file
+2025-10-18 09:15:41 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 2 flow
+2025-10-18 09:15:41 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 3 flow
+2025-10-18 09:15:41 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 3 flow
+2025-10-18 09:15:41 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 4 flow
+2025-10-18 09:15:41 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 4 flow
+2025-10-18 09:15:41 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 4 flow
+2025-10-18 09:15:41 DEBUG cic.cs.unb.ca.jnetpcap.PacketReader    Read All packets on /data/ipp.pcap
+2025-10-18 11:16:12 INFO  cic.cs.unb.ca.ifm.Cmd    You select: /data/ipv4frags.pcap
+2025-10-18 11:16:12 INFO  cic.cs.unb.ca.ifm.Cmd    Out folder: /out
+2025-10-18 11:16:13 INFO  cic.cs.unb.ca.ifm.Cmd    CICFlowMeter received 1 pcap file
+2025-10-18 11:16:13 DEBUG cic.cs.unb.ca.jnetpcap.PacketReader    Read All packets on /data/ipv4frags.pcap
+2025-10-18 11:18:15 INFO  cic.cs.unb.ca.ifm.Cmd    You select: /data/ipv4frags copy.pcap
+2025-10-18 11:18:15 INFO  cic.cs.unb.ca.ifm.Cmd    Out folder: /out
+2025-10-18 11:18:15 INFO  cic.cs.unb.ca.ifm.Cmd    CICFlowMeter received 1 pcap file
+2025-10-18 11:18:15 DEBUG cic.cs.unb.ca.jnetpcap.PacketReader    Read All packets on /data/ipv4frags copy.pcap
+2025-10-18 11:18:51 INFO  cic.cs.unb.ca.ifm.Cmd    You select: /data/ipp copy.pcap
+2025-10-18 11:18:51 INFO  cic.cs.unb.ca.ifm.Cmd    Out folder: /out
+2025-10-18 11:18:51 INFO  cic.cs.unb.ca.ifm.Cmd    CICFlowMeter received 1 pcap file
+2025-10-18 11:18:51 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 2 flow
+2025-10-18 11:18:51 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 3 flow
+2025-10-18 11:18:51 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 3 flow
+2025-10-18 11:18:51 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 4 flow
+2025-10-18 11:18:51 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 4 flow
+2025-10-18 11:18:51 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 4 flow
+2025-10-18 11:18:51 DEBUG cic.cs.unb.ca.jnetpcap.PacketReader    Read All packets on /data/ipp copy.pcap
+2025-10-18 11:38:21 INFO  cic.cs.unb.ca.ifm.Cmd    You select: /data
+2025-10-18 11:38:21 INFO  cic.cs.unb.ca.ifm.Cmd    Out folder: /out
+2025-10-18 11:38:22 DEBUG swing.common.SwingUtils    /data/logs (Is a directory)
+2025-10-18 11:38:22 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 2 flow
+2025-10-18 11:38:22 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 3 flow
+2025-10-18 11:38:22 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 3 flow
+2025-10-18 11:38:22 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 4 flow
+2025-10-18 11:38:22 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 4 flow
+2025-10-18 11:38:22 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 4 flow
+2025-10-18 11:38:22 DEBUG cic.cs.unb.ca.jnetpcap.PacketReader    Read All packets on /data/ipp copy.pcap
+2025-10-18 11:38:22 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 2 flow
+2025-10-18 11:38:22 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 3 flow
+2025-10-18 11:38:22 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 3 flow
+2025-10-18 11:38:22 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 4 flow
+2025-10-18 11:38:22 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 4 flow
+2025-10-18 11:38:22 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 4 flow
+2025-10-18 11:38:22 DEBUG cic.cs.unb.ca.jnetpcap.PacketReader    Read All packets on /data/ipp.pcap
+2025-10-18 11:38:22 DEBUG cic.cs.unb.ca.jnetpcap.PacketReader    Read All packets on /data/ipv4frags.pcap
+2025-10-18 11:38:22 DEBUG cic.cs.unb.ca.jnetpcap.PacketReader    Read All packets on /data/ipv4frags copy.pcap

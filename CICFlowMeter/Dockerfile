@@ -15,7 +15,8 @@ ENV PATH="$JAVA_HOME/bin:$PATH"
 
 # Copy CICFlowMeter from your repository into the container
 COPY CICFlowMeter-4.0/CICFlowMeter-4.0 /opt/CICFlowMeter-4.0
-
+# Verify contents
+RUN ls -l /opt/CICFlowMeter-4.0/bin
 # Make binaries executable
 RUN chmod +x /opt/CICFlowMeter-4.0/bin/cfm && \
     chmod +x /opt/CICFlowMeter-4.0/bin/CICFlowMeter
@@ -28,7 +29,7 @@ ENV PATH="$PATH:/opt/CICFlowMeter-4.0/bin"
 WORKDIR /data
 
 # Declare mount points for data and output
-VOLUME ["/data", "/out"]
+VOLUME ["/input", "/out"]
 
 # Default entrypoint runs CICFlowMeter CLI
 ENTRYPOINT ["cfm"]
