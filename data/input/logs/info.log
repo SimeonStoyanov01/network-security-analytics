@@ -171,3 +171,18 @@
 2025-10-21 10:06:01 - You select: /data/ipp copy.pcap
 2025-10-21 10:06:01 - Out folder: /out
 2025-10-21 10:06:01 - CICFlowMeter received 1 pcap file
+2025-10-28 10:25:01 - You select: /data/DoS-GoldenEye_attack copy 11 - kopie.pcap
+2025-10-28 10:25:01 - Out folder: /out
+2025-10-28 10:25:01 - CICFlowMeter received 1 pcap file
+2025-10-28 10:36:49 - You select: /data/DoS-GoldenEye_attack copy 11 - kopie - kopie.pcap
+2025-10-28 10:36:49 - Out folder: /out
+2025-10-28 10:36:50 - CICFlowMeter received 1 pcap file
+2025-10-28 11:28:01 - You select: /data/DoS-GoldenEye_attack copy 11 - kopie (2).pcap
+2025-10-28 11:28:01 - Out folder: /out
+2025-10-28 11:28:02 - CICFlowMeter received 1 pcap file
+2025-10-28 11:30:23 - You select: /data/ipp copy - kopie.pcap
+2025-10-28 11:30:23 - Out folder: /out
+2025-10-28 11:30:24 - CICFlowMeter received 1 pcap file
+2025-10-28 11:30:42 - You select: /data/ipv4frags - kopie.pcap
+2025-10-28 11:30:42 - Out folder: /out
+2025-10-28 11:30:42 - CICFlowMeter received 1 pcap file

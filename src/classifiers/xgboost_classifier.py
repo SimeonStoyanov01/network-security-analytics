@@ -2,7 +2,7 @@ import pandas as pd
 from pathlib import Path
 import joblib
 
-MODEL_PATH = Path(__file__).resolve().parent / "modelexport" / "xgboost_pipeline.pkl"
+MODEL_PATH = Path(__file__).resolve().parent / "modelexport" / "xgboost_pipeline(1).pkl"
 _model = None
 
 def load_model():
@@ -16,24 +16,22 @@ import pandas as pd
 from pathlib import Path
 
 EXPECTED_FEATURES = [
-    "ACK Flag Cnt", "Active Max", "Active Mean", "Active Min", "Active Std",
-    "Bwd Header Len", "Bwd IAT Max", "Bwd IAT Mean", "Bwd IAT Min", "Bwd IAT Std",
-    "Bwd IAT Tot", "Bwd PSH Flags", "Bwd Pkt Len Max", "Bwd Pkt Len Mean",
-    "Bwd Pkt Len Min", "Bwd Pkt Len Std", "Bwd Pkts/s", "Bwd Seg Size Avg",
-    "Bwd URG Flags", "CWE Flag Count", "Down/Up Ratio", "Dst IP", "ECE Flag Cnt",
-    "FIN Flag Cnt", "Flow Duration", "Flow IAT Max", "Flow IAT Mean",
-    "Flow IAT Min", "Flow IAT Std", "Flow ID", "Fwd Act Data Pkts",
-    "Fwd Header Len", "Fwd IAT Max", "Fwd IAT Mean", "Fwd IAT Min", "Fwd IAT Std",
-    "Fwd IAT Tot", "Fwd PSH Flags", "Fwd Pkt Len Max", "Fwd Pkt Len Mean",
-    "Fwd Pkt Len Min", "Fwd Pkt Len Std", "Fwd Pkts/s", "Fwd Seg Size Avg",
-    "Fwd Seg Size Min", "Fwd URG Flags", "Idle Max", "Idle Mean", "Idle Min",
-    "Idle Std", "Init Bwd Win Byts", "Init Fwd Win Byts", "PSH Flag Cnt",
-    "Pkt Len Max", "Pkt Len Mean", "Pkt Len Min", "Pkt Len Std", "Pkt Len Var",
-    "Pkt Size Avg", "Protocol", "RST Flag Cnt", "SYN Flag Cnt", "Src IP",
-    "Src Port", "Subflow Bwd Byts", "Subflow Bwd Pkts", "Subflow Fwd Byts",
-    "Subflow Fwd Pkts", "Tot Bwd Pkts", "Tot Fwd Pkts", "TotLen Bwd Pkts",
-    "TotLen Fwd Pkts", "URG Flag Cnt"
+    'Protocol', 'Flow Duration', 'Tot Fwd Pkts', 'Tot Bwd Pkts',
+    'TotLen Fwd Pkts', 'TotLen Bwd Pkts', 'Fwd Pkt Len Max', 'Fwd Pkt Len Min',
+    'Fwd Pkt Len Mean', 'Fwd Pkt Len Std', 'Bwd Pkt Len Max', 'Bwd Pkt Len Min',
+    'Bwd Pkt Len Mean', 'Bwd Pkt Len Std', 'Flow IAT Mean', 'Flow IAT Std',
+    'Flow IAT Max', 'Flow IAT Min', 'Fwd IAT Tot', 'Fwd IAT Mean', 'Fwd IAT Std',
+    'Fwd IAT Max', 'Fwd IAT Min', 'Bwd IAT Tot', 'Bwd IAT Mean', 'Bwd IAT Std',
+    'Bwd IAT Max', 'Bwd IAT Min', 'Fwd PSH Flags', 'Fwd Header Len', 'Bwd Header Len',
+    'Pkt Len Min', 'Pkt Len Max', 'Pkt Len Mean', 'Pkt Len Std', 'Pkt Len Var',
+    'FIN Flag Cnt', 'SYN Flag Cnt', 'RST Flag Cnt', 'PSH Flag Cnt', 'ACK Flag Cnt',
+    'URG Flag Cnt', 'ECE Flag Cnt', 'Down/Up Ratio', 'Pkt Size Avg', 'Fwd Seg Size Avg',
+    'Bwd Seg Size Avg', 'Subflow Fwd Pkts', 'Subflow Fwd Byts', 'Subflow Bwd Pkts',
+    'Subflow Bwd Byts', 'Init Fwd Win Byts', 'Init Bwd Win Byts', 'Fwd Act Data Pkts',
+    'Fwd Seg Size Min', 'Active Mean', 'Active Std', 'Active Max', 'Active Min',
+    'Idle Mean', 'Idle Std', 'Idle Max', 'Idle Min'
 ]
+
 
 
 def preprocess_csv(csv_path: Path):
