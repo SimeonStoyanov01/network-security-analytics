@@ -15,6 +15,7 @@ def load_model():
 import pandas as pd
 from pathlib import Path
 
+# all the features we use
 EXPECTED_FEATURES = [
     'Protocol', 'Flow Duration', 'Tot Fwd Pkts', 'Tot Bwd Pkts',
     'TotLen Fwd Pkts', 'TotLen Bwd Pkts', 'Fwd Pkt Len Max', 'Fwd Pkt Len Min',
