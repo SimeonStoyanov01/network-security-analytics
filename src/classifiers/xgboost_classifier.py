@@ -5,55 +5,55 @@ import numpy as np
 import sys
 import argparse
 
-MODEL_PATH = Path(__file__).resolve().parent / "modelexport" / "xgboost_pipeline.pkl"
+from core.alerting import log_alert
+
+MODEL_PATH = Path(__file__).resolve().parent / "modelexport" / "xgboost_pipeline(2).pkl"
+FEATURES_PATH = Path(__file__).parent / "modelexport" / "feature_names.pkl"
+
+FEATURE_NAMES = None
 _model = None
 
 def load_model():
-    global _model
+    global _model, FEATURE_NAMES
     if _model is None:
         _model = joblib.load(MODEL_PATH)
         print(f"[MODEL] Loaded XGBoost pipeline from {MODEL_PATH.name}")
+    if FEATURE_NAMES is None:
+        FEATURE_NAMES = joblib.load(FEATURES_PATH)
+        print(f"[MODEL] Loaded feature names from {FEATURES_PATH.name}")
     return _model
 
 def preprocess_csv(csv_path: Path):
-    # Load data
+    model = load_model()  # ensures FEATURE_NAMES is loaded
     df = pd.read_csv(csv_path)
     df.columns = df.columns.str.strip()
     df.replace([np.inf, -np.inf], np.nan, inplace=True)
-    
-    # Drop same columns as training
-    drop_cols = ["Timestamp", "Fwd Byts/b Avg", "Fwd Pkts/b Avg", "Fwd Blk Rate Avg",
-                 "Bwd Byts/b Avg", "Bwd Pkts/b Avg", "Bwd Blk Rate Avg",
-                 "Flow Byts/s", "Flow Pkts/s", "Dst Port"]
-    
-    for col in drop_cols:
-        if col in df.columns:
-            df.drop(col, axis=1, inplace=True)
-    
-    # Drop constant columns
-    X_test = df.select_dtypes(include=[np.number])
-    constant_cols = X_test.nunique()[X_test.nunique() <= 1].index.tolist()
-    if constant_cols:
-        print(f"[PREPROCESS] Dropped constant columns: {constant_cols}")
-        X_test.drop(constant_cols, axis=1, inplace=True)
-    
-    # Get expected feature count from pipeline model
-    model = load_model()
-    expected_features = len(model.named_steps['standardscaler'].mean_)
-    
-    # Ensure we have the right number of features
-    if len(X_test.columns) != expected_features:
-        print(f"[PREPROCESS] Adjusting features: {len(X_test.columns)} -> {expected_features}")
-        # Add dummy columns if we have fewer features
-        while len(X_test.columns) < expected_features:
-            X_test[f'dummy_{len(X_test.columns)}'] = 0
-        # Drop extra columns if we have more features  
-        X_test = X_test.iloc[:, :expected_features]
-    
+
+    # Fill missing columns with zeros
+    for col in FEATURE_NAMES:
+        if col not in df.columns:
+            df[col] = 0
+
+    # Keep only the columns the model expects, in the right order
+    X_test = df[FEATURE_NAMES].copy()
+
+    # keep only numeric features
+    numeric_cols = X_test.select_dtypes(include=[np.number]).columns
+    X_test = X_test[numeric_cols]
+
+    # Fill NaNs with 0 (or another strategy if you prefer)
+    X_test.fillna(0, inplace=True)
+
     return X_test
+
+
 
 def predict_flows(csv_path: Path, save_csv: bool = True) -> pd.DataFrame:
     model = load_model()
+
+    df_original = pd.read_csv(csv_path)
+    df_original.columns = df_original.columns.str.strip()
+
     X = preprocess_csv(csv_path)
 
     y_pred = model.predict(X)
@@ -68,6 +68,11 @@ def predict_flows(csv_path: Path, save_csv: bool = True) -> pd.DataFrame:
     print(f"[PREDICT] Completed predictions for {len(X)} flows.")
     print("[DEBUG] Prediction value counts:")
     print(pd.Series(y_pred).value_counts())
+   
+    for i, pred in enumerate(y_pred):
+        if pred == 1:
+            flow = df_original.iloc[i].to_dict()  # original row with IPs
+            log_alert(csv_path.stem, flow, pred)
 
     if save_csv:
         output_path = csv_path.parent / f"{csv_path.stem}_predictions.csv"

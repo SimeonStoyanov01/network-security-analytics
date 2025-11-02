@@ -15,6 +15,11 @@ ENV PATH="$JAVA_HOME/bin:$PATH"
 
 # Copy CICFlowMeter from your repository into the container
 COPY CICFlowMeter-4.0/CICFlowMeter-4.0 /opt/CICFlowMeter-4.0
+
+
+RUN apt-get update && apt-get install -y dos2unix && \
+    find /opt/CICFlowMeter-4.0/bin -type f -exec dos2unix {} \; && \
+    rm -rf /var/lib/apt/lists/*
 # Verify contents
 RUN ls -l /opt/CICFlowMeter-4.0/bin
 # Make binaries executable

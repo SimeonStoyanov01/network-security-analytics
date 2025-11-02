@@ -9,7 +9,7 @@ def run_pipeline(pcap_path, out_dir):
     csvs = extract_flows(pcap_path, out_dir)
     for csv in csvs:
         df = predict_flows(csv, save_csv=True) #  Changed to use classify_flow from dummy_classifier.py, revert to predict_flows for xgboost
-        for _, row in df.iterrows():
-            log_alert(pcap_path.name, row.dropna().to_dict(), row["Prediction"])
+        #for _, row in df.iterrows():
+        #    log_alert(pcap_path.name, row.dropna().to_dict(), row["Prediction"])
     return f"Processed {pcap_path.name} ({len(csvs)} CSVs)"
 
